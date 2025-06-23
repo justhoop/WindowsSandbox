@@ -1,0 +1,28 @@
+<Configuration>
+    <MappedFolders>
+        <MappedFolder>
+            <!-- Scripts folder -->
+            <HostFolder></HostFolder>
+            <SandboxFolder>C:\scripts</SandboxFolder>
+            <ReadOnly>true</ReadOnly>
+        </MappedFolder>
+        <MappedFolder>
+            <!-- Data folder -->
+            <HostFolder></HostFolder>
+            <SandboxFolder>C:\Data</SandboxFolder>
+            <ReadOnly>false</ReadOnly>
+        </MappedFolder>
+        <MappedFolder>
+            <!-- Suspect folder -->
+            <HostFolder></HostFolder>
+            <SandboxFolder>C:\Suspect</SandboxFolder>
+            <ReadOnly>true</ReadOnly>
+        </MappedFolder>
+    </MappedFolders>
+    <Networking>Enable</Networking>
+    <ClipboardRedirection>true</ClipboardRedirection>
+    <MemoryInMB>8192</MemoryInMB>
+    <LogonCommand>
+        <Command>C:\scripts\sandbox-setup.cmd</Command>
+    </LogonCommand>
+</Configuration>

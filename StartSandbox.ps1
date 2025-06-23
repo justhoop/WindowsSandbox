@@ -51,6 +51,20 @@ function Get-Tools {
     }
 }
 
+$folders = @("Data", "Scripts", "Suspect")
+
+ 
+
+foreach ($folder in $folders) {
+
+    if (-not(Test-Path $folder)) {
+
+        New-Item $folder -ItemType Directory
+
+    }
+
+}
+
 [xml]$config = Get-Content .\BaseConfig.wsb
 
 $config.configuration.MappedFolders.ChildNodes | Where-Object { $_.'#comment' -match "Scripts" } | ForEach-Object { $_.HostFolder = (Get-Location).path + "\Scripts" }
